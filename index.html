@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Page with GTM</title>
+    <title>Sample Page with GTM and Interaction</title>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,7 +19,24 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <h1>Welcome to My Sample Page</h1>
-    <p>This is a sample page to demonstrate GTM integration with GitHub Pages.</p>
+    <p>This is a sample page to demonstrate GTM integration with GitHub Pages and interactive elements.</p>
+
+    <!-- Text input field -->
+    <input type="text" id="inputField" placeholder="Enter text here">
+
+    <!-- Button -->
+    <button onclick="displayHello()">Click Me</button>
+
+    <!-- Placeholder for the message -->
+    <p id="message"></p>
+
+    <!-- JavaScript to display 'Hello' -->
+    <script>
+        function displayHello() {
+            var message = document.getElementById('inputField').value || 'Hello';
+            document.getElementById('message').innerText = message;
+        }
+    </script>
 
 </body>
 </html>
